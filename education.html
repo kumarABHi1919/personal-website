@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Education | Abhishek Kumar</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+
+        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+       
+
+        :root {
+            --background: #f7f7f5;
+            --card: #ffffff;
+            --text: #17213d;
+            --muted: #687086;
+            --accent: #4f6fd8;
+            --border: #e4e6eb;
+            --soft-blue: #eef2ff;
+        }
+
+
+      
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--background);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+
+       
+
+        .education-page {
+            max-width: 1150px;
+            margin: auto;
+            padding: 90px 60px 120px;
+        }
+
+
+       
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 90px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .eyebrow {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .title {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(58px, 8vw, 92px);
+            font-weight: 500;
+            line-height: 0.95;
+            letter-spacing: -3px;
+            font-style: italic;
+        }
+
+        .header-description {
+            max-width: 290px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: right;
+        }
+
+
+        
+
+        .education-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+       
+
+        .education-item {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 55px;
+
+            padding: 45px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            transition: transform 0.3s ease;
+        }
+
+        .education-item:first-child {
+            padding-top: 0;
+        }
+
+        .education-item:hover {
+            transform: translateX(6px);
+        }
+
+
+      
+
+        .year-wrapper {
+            position: relative;
+        }
+
+        .year {
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--accent);
+        }
+
+        .year-wrapper::before {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            background: var(--accent);
+            border-radius: 50%;
+
+            left: -25px;
+            top: 6px;
+        }
+
+
+        
+
+        .education-content {
+            max-width: 760px;
+        }
+
+        .institution {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .location {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .degree {
+            display: inline-block;
+
+            padding: 8px 14px;
+
+            background: var(--soft-blue);
+            color: var(--accent);
+
+            border-radius: 30px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            margin-bottom: 22px;
+        }
+
+
+       
+
+        .coursework-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+
+            color: var(--muted);
+
+            margin-bottom: 12px;
+        }
+
+        .coursework {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .course {
+            padding: 8px 13px;
+
+            border: 1px solid var(--border);
+            border-radius: 6px;
+
+            background: rgba(255, 255, 255, 0.6);
+
+            font-size: 13px;
+            color: #424b61;
+
+            transition: all 0.25s ease;
+        }
+
+        .course:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: white;
+        }
+
+
+       
+
+        .subjects {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .subject {
+            font-size: 13px;
+            color: var(--muted);
+
+            padding: 7px 12px;
+
+            border: 1px solid var(--border);
+            border-radius: 5px;
+        }
+
+
+       
+
+        .education-footer {
+            margin-top: 70px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .education-footer span:first-child {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+
+      
+
+        @media (max-width: 800px) {
+
+            .education-page {
+                padding: 60px 30px 80px;
+            }
+
+            .header {
+                display: block;
+                margin-bottom: 70px;
+            }
+
+            .title {
+                margin-bottom: 25px;
+            }
+
+            .header-description {
+                text-align: left;
+                max-width: 450px;
+            }
+
+            .education-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+
+                padding: 38px 0;
+            }
+
+            .education-item:first-child {
+                padding-top: 0;
+            }
+
+            .year-wrapper::before {
+                display: none;
+            }
+
+            .institution {
+                font-size: 26px;
+            }
+
+            .education-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .education-page {
+                padding: 45px 22px 60px;
+            }
+
+            .title {
+                font-size: 58px;
+                letter-spacing: -2px;
+            }
+
+            .education-item {
+                padding: 32px 0;
+            }
+
+            .institution {
+                font-size: 24px;
+            }
+
+            .degree {
+                font-size: 12px;
+            }
+
+            .course,
+            .subject {
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <main class="education-page">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <div class="eyebrow">
+                    Academic Background
+                </div>
+
+                <h1 class="title">
+                    Education
+                </h1>
+            </div>
+
+           
+        
+
+        </header>
+
+
+        <!-- EDUCATION -->
+        <section class="education-list">
+
+
+            <!-- UNIVERSITY -->
+            <article class="education-item">
+
+                <div class="year-wrapper">
+                    <div class="year">
+                        2024 — 2028
+                    </div>
+                </div>
+
+
+                <div class="education-content">
+
+                    <h2 class="institution">
+                        Uttaranchal University
+                    </h2>
+
+                    <p class="location">
+                        Dehradun, Uttarakhand
+                    </p>
+
+                    <span class="degree">
+                        Bachelor of Technology · Computer Science Engineering
+                    </span>
+
+
+                    <p class="coursework-label">
+                        Relevant Coursework
+                    </p>
+
+                    <div class="coursework">
+
+                        <span class="course">
+                            Data Structures
+                        </span>
+
+                        <span class="course">
+                            Web Development
+                        </span>
+
+                        <span class="course">
+                            Database Management
+                        </span>
+
+                        <span class="course">
+                            Machine Learning
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SCHOOL -->
+            <article class="education-item">
+
+                <div class="year-wrapper">
+                    <div class="year">
+                        2016 — 2023
+                    </div>
+                </div>
+
+
+                <div class="education-content">
+
+                    <h2 class="institution">
+                        The Sapience School
+                    </h2>
+
+                    <p class="location">
+                        Dehradun, Uttarakhand
+                    </p>
+
+                    <span class="degree">
+                        Senior Secondary Education
+                    </span>
+
+
+                    <p class="coursework-label">
+                        Core Subjects
+                    </p>
+
+                    <div class="subjects">
+
+                        <span class="subject">
+                            Physics
+                        </span>
+
+                        <span class="subject">
+                            Chemistry
+                        </span>
+
+                        <span class="subject">
+                            Mathematics
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="education-footer">
+
+            <span>
+                Abhishek Kumar
+            </span>
+
+            <span>
+                Computer Science Engineering · 2024—2028
+            </span>
+
+        </footer>
+
+    </main>
+
+</body>
+</html>
