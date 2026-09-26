@@ -1217,3 +1217,71 @@ footer {
     }
 
 }
+
+
+
+/* =========================
+   COMING SOON PAGE
+========================= */
+
+.coming-soon {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 30px;
+
+}
+
+
+.coming-soon .eyebrow {
+
+    margin-bottom: 20px;
+
+}
+
+
+.coming-soon h1 {
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: clamp(70px, 10vw, 130px);
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    font-style: italic;
+
+    letter-spacing: -5px;
+
+    color: var(--text);
+
+    margin-bottom: 25px;
+
+}
+
+
+.coming-soon p:not(.eyebrow) {
+
+    max-width: 500px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+
+}
+
